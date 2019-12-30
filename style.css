@@ -1,0 +1,157 @@
+/* דף מטריצת סודוקו */
+/* תא */
+.sudokoInput{
+    /* גודל תא */
+    width: 50px;
+    height: 50px;
+    margin: 1px 1px 1px 1px;
+    /* עיצוב מסגרת */
+    border: 0.8px solid white ;
+    /* עיצוב כתב */
+    font-size: 25px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+}
+/* כל המטריצה */
+.divSudoku{
+    margin: 1.5px 1.5px 1.5px 1.5px;
+}
+table{
+    margin: 0px 10px 5px 65%;
+    display: inline;
+}
+/* כפתורים */
+.CButtons{
+    height: 50px;
+    width: 102px;
+    color: white;
+    font-size: 21px;
+    padding: 5px 0px 5px 5px;
+    background-color: black;
+    border: 1px solid  black;
+    font-weight: bold;
+    
+}
+#firstButton{
+    margin-left: 63.5%;
+}
+/* כפתור רמז */
+.selectNumB{
+    /* כפתור */
+    width: 50px;
+    height: 50px;
+    margin: 4px 4px 4px 5px;
+    /* גבול */
+    border-radius: 5px;
+    border: 0.8px solid black;
+    /* סוג כתב */
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+
+}
+/* כל הכפתורים */
+#selectNumDiv{
+    margin-left: 62%;
+   
+    
+}
+body{
+    background-image: url(reka.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(13, 13, 13);
+}
+
+
+/* דף בחירת שלב */
+/* radio */
+#radioLavels{
+    font-size: 30px;
+    color: white;
+    margin: 10% 0px 30px 73%;
+    font-weight: bold;
+
+}
+/* מיקום כפתור */
+#levelsButton{
+    margin: 0px 0px 0px 69%;
+    width: 300px;
+
+}
+
+
+/* דף כניסת משתמש */
+/* עיצוב הודעת שגיאה */
+.erorr{
+    color: red;
+    font-size: smaller;
+    margin: 0px 0px 0px 70%;
+    font-weight: bold;
+}
+/* תיבןת טקסט */
+.userNameInputs{
+width: 250px;
+height: 35px;
+
+background-color: rgb(255, 255, 255);
+font-weight: bold;
+
+margin: 6px 0px 0px 70%;
+
+}
+/* כפתור */
+#userNameButton{
+    margin: 32px 0px 0px 69%;
+    width: 300px;
+
+}
+.userP{
+    margin: 0px 0px 0px 70%;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+#userEmptySpan{
+    margin-top: 10%;
+}
+
+
+/* open page */
+/* logo */
+.logo{
+    display: inline;
+margin-left: 12px;
+    opacity: 0.5;
+}
+.spanLogo{
+    background-color: white;
+    border-radius: 7px;
+    color:black;
+    font-weight: bold;
+    font-size: 150px;
+    padding: 0px 2px 0px 2px;
+}
+#fullLogo{
+    margin: 30% 0px 0px 48%;
+   
+}
+
+/* logo pages */
+.logoP{
+    display: inline;
+    opacity: 0.2;
+}
+#fullLogoP{
+    margin: 3% 0px 0px 3%;  
+}
+.logoSpanP{
+    background-color: white;
+    border-radius: 7px;
+    color:black;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0px 2px 0px 2px;
+}

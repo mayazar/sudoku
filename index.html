@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>SUDOKU</title>
+        <link rel="icon" href="https://image.flaticon.com/icons/png/512/39/39857.png" type="image/icon type">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+        <div id="OpenContainer" class="d-none">
+                <div id="fullLogo">
+                        <div class="logo"><span class="spanLogo">S</span></div>
+                        <div class="logo"><span class="spanLogo">U</span></div>
+                        <div class="logo"><span class="spanLogo">D</span></div>
+                        <div class="logo"><span class="spanLogo">O</span></div>
+                        <div class="logo"><span class="spanLogo">K</span></div>
+                        <div class="logo"><span class="spanLogo">U</span></div>
+                </div>
+        </div>
+
+        <div id="UserContainer" class="">
+                <!-- לוגו -->
+                <div id="fullLogoP">
+                        <div class="logoP"><span class="logoSpanP">S</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                        <div class="logoP"><span class="logoSpanP">D</span></div>
+                        <div class="logoP"><span class="logoSpanP">O</span></div>
+                        <div class="logoP"><span class="logoSpanP">K</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                </div>
+                <p id="userEmptySpan"></p>
+                <p class="userP">user name:</p>
+                <input type="text" id="userName" class="userNameInputs">
+                <p id="userNameErorr" class="erorr"></p>
+                <p class="userP">password:</p>
+                <input type="password" id="userPassword" class="userNameInputs">
+                <p id="userPasswordErorr" class="erorr"></p>
+
+                <input type="button" onclick="checkUserDitailes()" value="ENTER" class="CButtons" id="userNameButton">
+
+        </div>
+        <div id="LevelContainer" class="d-none">
+                <!-- לוגו -->
+                <div id="fullLogoP">
+                        <div class="logoP"><span class="logoSpanP">S</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                        <div class="logoP"><span class="logoSpanP">D</span></div>
+                        <div class="logoP"><span class="logoSpanP">O</span></div>
+                        <div class="logoP"><span class="logoSpanP">K</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                </div>
+                <!-- טופס -->
+                <div id="radioLavels">
+                        <input type="radio" name="level" value="1" id="level1" checked> eazy<br>
+                        <input type="radio" name="level" value="2" id="level2"> normal<br>
+                        <input type="radio" name="level" value="3" id="level3"> hard<br>
+                </div>
+                <button value="play" onclick="chackLevel()" class="CButtons" id="levelsButton">PLAY</button>
+        </div>
+        <div id="IndexContainer" class="d-none">
+                <!-- לוגו -->
+                <div id="fullLogoP">
+                        <div class="logoP"><span class="logoSpanP">S</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                        <div class="logoP"><span class="logoSpanP">D</span></div>
+                        <div class="logoP"><span class="logoSpanP">O</span></div>
+                        <div class="logoP"><span class="logoSpanP">K</span></div>
+                        <div class="logoP"><span class="logoSpanP">U</span></div>
+                </div>
+
+                <table>
+                        <tr>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p00" class="sudokoInput" value="">
+                                                <input type="number" min="1" max="9" id="p01" class="sudokoInput" value="">
+                                                <input type="number" min="1" max="9" id="p02" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p10" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p11" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p12" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p20" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p21" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p22" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p03" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p04" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p05" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p13" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p14" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p15" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p23" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p24" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p25" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p06" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p07" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p08" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p16" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p17" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p18" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p26" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p27" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p28" class="sudokoInput">
+                                        </div>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p30" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p31" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p32" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p40" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p41" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p42" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p50" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p51" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p52" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p33" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p34" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p35" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p43" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p44" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p45" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p53" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p54" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p55" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p36" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p37" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p38" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p46" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p47" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p48" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p56" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p57" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p58" class="sudokoInput">
+                                        </div>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p60" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p61" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p62" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p70" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p71" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p72" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p80" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p81" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p82" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p63" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p64" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p65" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p73" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p74" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p75" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p83" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p84" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p85" class="sudokoInput">
+
+                                        </div>
+                                </td>
+                                <td>
+                                        <div class="divSudoku">
+                                                <input type="number" min="1" max="9" id="p66" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p67" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p68" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p76" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p77" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p78" class="sudokoInput"><br>
+                                                <input type="number" min="1" max="9" id="p86" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p87" class="sudokoInput">
+                                                <input type="number" min="1" max="9" id="p88" class="sudokoInput">
+
+                                        </div>
+
+                                </td>
+                        </tr>
+                </table>
+
+                <div id="selectNumDiv">
+                        <button class="selectNumB" onclick="selectNum('1')">1</button>
+                        <button class="selectNumB" onclick="selectNum('2')">2</button>
+                        <button class="selectNumB" onclick="selectNum('3')">3</button>
+                        <button class="selectNumB" onclick="selectNum('4')">4</button>
+                        <button class="selectNumB" onclick="selectNum('5')">5</button>
+                        <button class="selectNumB" onclick="selectNum('6')">6</button>
+                        <button class="selectNumB" onclick="selectNum('7')">7</button>
+                        <button class="selectNumB" onclick="selectNum('8')">8</button>
+                        <button class="selectNumB" onclick="selectNum('9')">9</button>
+                </div>
+
+                <div>
+                        <br>
+                        <button class="CButtons" id="firstButton" onclick="back()">BACK</button>
+                        <button class="CButtons" onclick="newGame()">NEW</button>
+                        <button onclick="clean()" class="CButtons">CLEAN</button>
+                        <button class="CButtons" onclick="GetMat()">CHECK</button>
+                        <button class="CButtons" id="exitBtn" >EXIT</button>
+
+
+                </div>
+        </div>
+
+
+
+        <script src='script.js'></script>
+</body>
+
+</html>
